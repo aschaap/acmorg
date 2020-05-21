@@ -1,7 +1,18 @@
-# ACM Small in ORG
-The ACM small template in OrgMode, just type make (after installing
-acmart.cls in your system). Be aware that this example is compatible
-with OrgMode 9.*. Earlier or later OrgMode versions may require minor
-modifications to the Makefile and/or the ORG file.  For a detailed
+#+TITLE:ACM SIGPLAN (May 2020) in Org-mode 9.*
+#+AUTHOR: Alexander Schaap
+#+OPTIONS: toc:nil
+
+The [[http://sigplan.org/Resources/Author/#acmart-format][ACM SIGPLAN template]] in [[https://orgmode.org/][Org-mode]], just type ~make~ (after installing
+=acmart.cls= in your system). Be aware that this example is compatible
+with OrgMode 9.*. Earlier or later Org-mode versions may require minor
+modifications to the =Makefile= and/or the Org file.  For a detailed
 explanation on why and how to write reproducible articles using
-OrgMode, please visit the following [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][page]].
+Org-mode, please visit the following [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][page]].
+
+Adapted from =sample-sigplan.tex= from the [[https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart-master.zip][=acmart= package]] and the
+[[https://github.com/schnorr/acmorg][ACM Small template in Org-mode]] by Lucas Mello Schnorr.
+
+Entering the remaining content of the =sample-sigplan.tex= file would
+be a good exercise for the novice reader.
+
+Source: https://github.com/aschaap/acmorg
