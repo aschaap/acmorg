@@ -1,17 +1,21 @@
 NAME=acmorg
+BIB=refs
 ARCHIVE=replicable
+FIGURES=figures/*
 # ARCHIVE_FILES=$(shell git ls-tree -r master --name-only | grep -v -e '$(NAME).pdf')
-ARCHIVE_FILES=$(NAME).org refs.bib Makefile figures/*
+ARCHIVE_FILES=$(NAME).org $(BIB).bib Makefile $(FIGURES)
 
 all: $(NAME).pdf
 
 # If you have good Emacs and Org-mode installed by default, delete "-l ~/.emacs.d/init.el"
 %.tex: %.org
-	emacs -batch -l ~/.emacs.d/init.el $^  --funcall org-babel-tangle
 	emacs -batch -l ~/.emacs.d/init.el --eval "(setq enable-local-eval t)" --eval "(setq enable-local-variables t)" \
 	--eval "(setq org-export-babel-evaluate t)" $^  --funcall org-latex-export-to-latex
 
-%.pdf: %.tex
+$(BIB).bib: $(NAME).org
+	emacs -batch -l ~/.emacs.d/init.el $^  --funcall org-babel-tangle
+
+%.pdf: %.tex $(BIB).bib
 	pdflatex $^
 	bibtex `basename $^ .tex`
 	pdflatex $^
