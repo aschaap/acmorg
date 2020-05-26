@@ -37,9 +37,8 @@
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(delete-if (lambda (package) (equal (cadr package) "amssymb")) org-latex-default-packages-alist) ; for omitting "amssymb" LaTeX package that conflicts with acmart.cls
 #+end_src
-
-#+RESULTS:
 
 * *The Paper*                                                       :ignore:
 ** Latex configurations                                             :ignore:
@@ -355,4 +354,5 @@ Tangle this file with ~org-babel-tangle~ (C-c C-v t).
 # eval: (require 'ox-extra)
 # eval: (ox-extras-activate '(ignore-headlines))
 # eval: (add-to-list 'org-latex-classes '("ACMART" "\\documentclass{acmart}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+# eval: (delete-if (lambda (package) (equal (cadr package) "amssymb")) org-latex-default-packages-alist) ; for omitting "amssymb" LaTeX package that conflicts with acmart.cls
 # End:
