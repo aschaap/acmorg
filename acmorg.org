@@ -99,13 +99,17 @@
 %\received[accepted]{June 2009}
 #+END_EXPORT
 ** Frontpage                                                        :ignore:
+*** Title                                                          :ignore:
 #+BEGIN_EXPORT latex
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
 %\title[Short Title]{This is the Real Title}
 \title{The Name of the Title is Hope}
+#+END_EXPORT
 
+*** Authors                                                        :ignore:
+#+BEGIN_EXPORT latex
 %%
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
@@ -230,13 +234,16 @@ preparation of the documentation of their work.
 
 #+END_EXPORT
 
-*** Keywords, Default Teaser Figure, and Thanks                    :ignore:
+*** Keywords                                                       :ignore:
 #+BEGIN_EXPORT latex
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
 \keywords{datasets, neural networks, gaze detection, text tagging}
+#+END_EXPORT
 
+*** Default Teaser Figure                                          :ignore:
+#+BEGIN_EXPORT latex
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
 %% page.
@@ -247,7 +254,10 @@ preparation of the documentation of their work.
   seats. Ichiro Suzuki preparing to bat.}
   \label{fig:teaser}
 \end{teaserfigure}
-
+#+END_EXPORT
+*** Thanks                                                         :ignore:
+# Thanks. Appears as a note at the bottom on the first page
+#+BEGIN_EXPORT latex
 \thanks{This work is supported by ...}
 #+END_EXPORT
 *** Maketitle                                                      :ignore:
