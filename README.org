@@ -12,6 +12,12 @@ Org-mode, please visit the following [[https://github.com/alegrand/RR_webinars/b
 Adapted from =sample-sigplan.tex= from the [[https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart-master.zip][=acmart= package]] and the
 [[https://github.com/schnorr/acmorg][ACM Small template in Org-mode]] by Lucas Mello Schnorr.
 
+Using [[https://github.com/jkitchin/org-ref][org-ref]] when writing papers is recommended due to the convenience it 
+offers. (It's included in the [[https://www.spacemacs.org/][Spacemacs]] [[https://www.spacemacs.org/layers/+lang/bibtex/README.html][BibTeX layer]]!) Additionally, cleveref 
+is supported in org-ref (it takes one line to [[https://github.com/jkitchin/org-ref/issues/463#issuecomment-310446179][set cref as the default ref type]]),
+and is better than autoref due to its ability to group multiple references
+(e.g., Figs. 1 and 2).
+
 Entering the remaining content of the =sample-sigplan.tex= file would
 be a good exercise for the novice reader.
 
