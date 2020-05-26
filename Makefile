@@ -16,10 +16,12 @@ $(BIB).bib: $(NAME).org
 	emacs -batch -l ~/.emacs.d/init.el $^  --funcall org-babel-tangle
 
 %.pdf: %.tex $(BIB).bib
-	pdflatex $^
-	bibtex `basename $^ .tex`
-	pdflatex $^
-	pdflatex $^
+	pdflatex `basename $@ .pdf`
+	bibtex `basename $@ .pdf`
+	pdflatex `basename $@ .pdf`
+	pdflatex `basename $@ .pdf`
+#	Alternatively:
+#	latexmk -shell-escape -f -pdf `basename $^ .tex`
 
 %.html: %.org
 	emacs -batch -l ~/.emacs.d/init.el --eval "(setq enable-local-eval t)" --eval "(setq enable-local-variables t)" \
