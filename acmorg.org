@@ -307,6 +307,11 @@ To Robert, for the bagels and explaining CMYK and color spaces.
 
 #+LATEX: \bibliographystyle{ACM-Reference-Format}
 #+LATEX: \bibliography{refs}
+
+# If using org-ref for bibliography, comment the two lines above and uncomment these two:
+# bibliographystyle:ACM-Reference-Format
+# bibliography:refs.bib
+
 ** Appendix                                                         :ignore:
 # If your work has an appendix, this is the place to put it.
 # Otherwise, remove this and any subsequent subsections.
