@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 # -*- mode: org -*-
 
+# ACM SIGPLAN template adapted from Lucas Mello Schnorr's ACM Small template.
+# https://github.com/schnorr/acmorg
+# Code in "Local Variables" at the bottom must be executed for this to work.
+
 #+TITLE: Title (appears only in the PDF properties)
+# Title for decorative purposes; defined down in *The Paper*>Frontpage>Title
 #+AUTHOR: Alexander Schaap
 
 #+STARTUP: overview indent
@@ -12,7 +17,9 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 
+# Custom export class defined at the end of this file
 #+LATEX_CLASS: ACMART
+# Default ACMART SIGPLAN options
 #+LATEX_CLASS_OPTIONS: [sigplan, screen]
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
@@ -219,7 +226,7 @@ preparation of the documentation of their work.
   <concept_desc>Networks~Network reliability</concept_desc>
   <concept_significance>100</concept_significance>
  </concept>
-</ccs2012>  
+</ccs2012>
 \end{CCSXML}
 
 \ccsdesc[500]{Computer systems organization~Embedded systems}
