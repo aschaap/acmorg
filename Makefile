@@ -5,6 +5,8 @@ FIGURES=figures/*
 # ARCHIVE_FILES=$(shell git ls-tree -r master --name-only | grep -v -e '$(NAME).pdf')
 ARCHIVE_FILES=$(NAME).org $(BIB).bib Makefile $(FIGURES)
 
+.PHONY: all clean distclean
+
 all: $(NAME).pdf
 
 # If you have good Emacs and Org-mode installed by default, delete "-l ~/.emacs.d/init.el"
